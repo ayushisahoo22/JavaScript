@@ -3,12 +3,12 @@
 // let score= "33abc"
 // let score= null
 let score= undefined
-console.log(typeof score)
-console.log(typeof(score)) //passed as a method
+// console.log(typeof score)
+// console.log(typeof(score)) //passed as a method
 
 let valueInNum=Number(score);
-console.log(typeof valueInNum); //no strict checking
-console.log(valueInNum)  
+// console.log(typeof valueInNum); //no strict checking
+// console.log(valueInNum)  
 
 // "33" => 33
 // "33abc" => NaN (not a number)
@@ -21,10 +21,28 @@ console.log(valueInNum)
 let isLoggedIn = 10  //true
 
 let booleanIsLoggedIn=Boolean(isLoggedIn)
-console.log(booleanIsLoggedIn);
+// console.log(booleanIsLoggedIn);
 
 //conversion to string
 let num=33
 let numToStr=String(num)
-console.log(numToStr)
-console.log(typeof(numToStr))
+// console.log(numToStr)
+// console.log(typeof(numToStr))
+
+//---------operations----------
+
+let str1="hello"
+let str2=" ayushi"
+let str3=str1+str2;
+console.log(str3);
+
+//if string comes first rest other will be treated same
+console.log("1"+2);  //12
+console.log("1"+2+2)  //122
+
+//if string comes later..the previous val will be added as integer
+console.log(1+"2");  //12
+console.log(1+2+"2");  //32
+
+console.log(+true) //1 [cant use true+]
+console.log(+"")  //"" means false  
