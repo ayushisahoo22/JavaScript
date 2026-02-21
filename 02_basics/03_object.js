@@ -1,68 +1,39 @@
-let score = "hitesh"
+// singleton
+// Object.create
 
-//console.log(typeof score);
-//console.log(typeof(score));
+// object literals
 
-let valueInNumber = Number(score)
-//console.log(typeof valueInNumber);
-//console.log(valueInNumber);
+const mySym = Symbol("key1")
 
 
-// "33" => 33
-// "33abc" => NaN
-//  true => 1; false => 0
+const JsUser = {
+    name: "Hitesh",
+    "full name": "Hitesh Choudhary",
+    [mySym]: "mykey1",   //to declare symbol
+    age: 18,
+    location: "Jaipur",
+    email: "hitesh@google.com",
+    isLoggedIn: false,
+    lastLoginDays: ["Monday", "Saturday"]
+}
 
-let isLoggedIn = "hitesh"
+console.log(JsUser.email)
+console.log(JsUser["email"])
+console.log(JsUser["full name"])
+console.log(JsUser[mySym])
 
-let booleanIsLoggedIn = Boolean(isLoggedIn)
-//  console.log(booleanIsLoggedIn);
+JsUser.email = "hitesh@chatgpt.com"
+// Object.freeze(JsUser)  //after freeze no updation will occur
+JsUser.email = "hitesh@microsoft.com"
+// console.log(JsUser);
 
-// 1 => true; 0 => false
-// "" => false
-// "hitesh" => true
+//functions can be passed as key in obj
+JsUser.greeting = function(){
+    console.log("Hello JS user");
+}
+JsUser.greetingTwo = function(){
+    console.log(`Hello JS user, ${this.name}`);
+}
 
-let someNumber = 33
-
-let stringNumber = String(someNumber)
-// console.log(stringNumber);
-// console.log(typeof stringNumber);
-
-// *********************** Operations ***********************
-
-let value = 3
-let negValue = -value
-// console.log(negValue);
-
-// console.log(2+2);
-// console.log(2-2);
-// console.log(2*2);
-// console.log(2**3);
-// console.log(2/3);
-// console.log(2%3);
-
-let str1 = "hello"
-let str2 = " hitesh"
-
-let str3 = str1 + str2
-// console.log(str3);
-
-// console.log("1" + 2);
-// console.log(1 + "2");
-// console.log("1" + 2 + 2);
-// console.log(1 + 2 + "2");
-
-// console.log( (3 + 4) * 5 % 3);
-
-// console.log(+true);
-// console.log(+"");
-
-let num1, num2, num3
-
-num1 = num2 = num3 = 2 + 2
-
-let gameCounter = 100
-++gameCounter;
-console.log(gameCounter);
-
-// link to study
-// https://tc39.es/ecma262/multipage/abstract-operations.html#sec-type-conversion
+console.log(JsUser.greeting());
+console.log(JsUser.greetingTwo());
