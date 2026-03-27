@@ -1,0 +1,49 @@
+body{
+    margin:0;
+    padding:0;
+}
+button{
+    background-color: #4E4D5C;
+    color: rgb(218, 213, 203);
+    margin-top: 15px;
+    margin-left: 15px;
+    border: 2px solid;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.boxes{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.box{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+}
+
+.yellow{
+    background-color: yellowgreen;
+}
+
+.grey{
+    background-color: grey;
+}
+
+.blue{
+    background-color: skyblue;
+}
+
+.rosy{
+    background-color:rosybrown;
+}
