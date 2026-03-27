@@ -1,0 +1,29 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #4E4D5C;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(180, 173, 160);
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+}
+
+.project-link{
+    margin:20px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    border: 3px solid;
+    border-radius: 15px;
+    color: beige;
+    background-color: #243B4A;
+    text-decoration: none;
+}
